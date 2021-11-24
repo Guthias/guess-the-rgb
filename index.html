@@ -2,10 +2,34 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Color Guess</title>
+  <title>Guess the RGB</title>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  <div class="game">
+    <header>
+      <h1 id="title">Guess the RGB</h1>
+      <span id="score">0</span>
+    </header>
+
+    <div>
+      <span id="rgb-color">(255, 255, 255)</span>
+      <span id="answer">Escolha uma cor</span>
+    </div>
+
+    <div class="colors-area">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+
+    <button id="reset-game">
+      Atualizar Cores
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
