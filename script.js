@@ -1,5 +1,6 @@
 const rgbColor = document.getElementById('rgb-color');
 const answer = document.getElementById('answer');
+const updateColors = document.getElementById('reset-game');
 
 function randomRGB() {
   const r = Math.round(Math.random() * 255);
@@ -43,7 +44,13 @@ function sayColor() {
   rgbColor.innerText = colorAnswer;
 }
 
-window.onload = () => {
+function newRound() {
   colorBalls();
   sayColor();
+  answer.innerText = 'Escolha uma cor';
+}
+updateColors.addEventListener('click', newRound);
+
+window.onload = () => {
+  newRound();
 };
