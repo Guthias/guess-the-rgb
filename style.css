@@ -3,7 +3,7 @@ body {
   color: white;
   font-weight: 700;
   padding: 50px 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .game {
@@ -55,6 +55,7 @@ header h1 {
   display: flex;
   justify-content: center;
 }
+
 .ball {
   height: 80px;
   width: 80px;
@@ -73,7 +74,7 @@ header h1 {
 #reset-game {
   padding: 15px 20px;
   cursor: pointer;
-  background-color: #2541B2;
+  background-color: #2541b2;
   border: none;
   color: white;
   font-size: 22px;
@@ -84,5 +85,5 @@ header h1 {
 }
 
 #reset-game:hover {
-  background-color: #03256C;
+  background-color: #03256c;
 }
