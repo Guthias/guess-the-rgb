@@ -37,7 +37,7 @@ function sayColor() {
     colors.push(elements[i].style.backgroundColor);
   }
 
-  const position = Math.round(Math.random() * colors.length);
+  const position = Math.floor(Math.random() * colors.length);
   let colorAnswer = colors[position];
   colorAnswer = colorAnswer.replace('rgb', '');
 
