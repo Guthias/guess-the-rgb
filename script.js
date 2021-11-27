@@ -1,7 +1,7 @@
 const rgbColor = document.getElementById('rgb-color');
 const answer = document.getElementById('answer');
 const updateColors = document.getElementById('reset-game');
-
+const score = document.getElementById('score');
 function randomRGB() {
   const r = Math.round(Math.random() * 255);
   const g = Math.round(Math.random() * 255);
@@ -9,12 +9,19 @@ function randomRGB() {
 
   return `rgb(${r}, ${g}, ${b})`;
 }
+
+function increaseScore() {
+  const currentPoints = parseInt(score.innerText, 10);
+  score.innerText = currentPoints + 3;
+}
+
 function checkRight(event) {
   let clickedColor = event.target.style.backgroundColor;
   clickedColor = clickedColor.replace('rgb', '');
   const rightColor = rgbColor.innerText;
 
   if (clickedColor === rightColor) {
+    increaseScore();
     answer.innerText = 'Acertou!';
   } else {
     answer.innerText = 'Errou! Tente novamente!';
