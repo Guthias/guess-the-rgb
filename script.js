@@ -10,9 +10,9 @@ function randomRGB() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-function increaseScore() {
+function changeScore(points) {
   const currentPoints = parseInt(score.innerText, 10);
-  score.innerText = currentPoints + 3;
+  score.innerText = currentPoints + points;
 }
 
 function checkRight(event) {
@@ -21,9 +21,10 @@ function checkRight(event) {
   const rightColor = rgbColor.innerText;
 
   if (clickedColor === rightColor) {
-    increaseScore();
+    changeScore(3);
     answer.innerText = 'Acertou!';
   } else {
+    changeScore(-1);
     answer.innerText = 'Errou! Tente novamente!';
   }
 }
